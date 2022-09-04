@@ -1,1 +1,10 @@
-<p>game-control works!</p>
+<button [disabled]="timerStarted" (click)="startBtnPress()" class="btn-primary">Start</button>
+<button (click)="endBtnPress()" class="btn-danger">End</button>
+<p class="timer-text">{{time}}</p>
+
+<h4>Even :</h4>
+<span class="even-num" *ngFor="let number of evenNumbers">{{number}} </span>
+<h4>Odds :</h4>
+<span class="odds-num" *ngFor="let number of oddsNumbers">{{number}} </span>
+<app-odd></app-odd>
+<app-even></app-even>
